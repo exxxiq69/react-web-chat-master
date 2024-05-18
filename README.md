@@ -23,4 +23,4 @@ npm i
 npm run start
 ```
 
-### [Ссылка](https://github.com/Coreytaz/React_Chat_Back) на Backend
+### [Ссылка](https://github.com/exxxiq69/React_Chat_Back-main.git) на Backend
