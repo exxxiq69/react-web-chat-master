@@ -1,0 +1,145 @@
+.container {
+  position: fixed;
+  z-index: 10;
+}
+
+.container:has(.top-right) {
+  top: 1rem;
+  right: 1rem;
+}
+
+.container:has(.bottom-right) {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.container:has(.bottom-left) {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.container:has(.top-left) {
+  top: 1rem;
+  left: 1rem;
+}
+
+.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+  animation-name: toast-in-right, leave-from-right;
+  animation-timing-function: linear, linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s, 0.3s;
+  animation-delay: 0s, 3s;
+}
+
+.bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+  animation-name: toast-in-left, leave-from-left;
+  animation-timing-function: linear, linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s, 0.3s;
+  animation-delay: 0s, 3s;
+}
+
+.top-right {
+  top: 1rem;
+  right: 1rem;
+  animation-name: toast-in-right, leave-from-right;
+  animation-timing-function: linear, linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s, 0.3s;
+  animation-delay: 0s, 3s;
+}
+
+.top-left {
+  top: 1rem;
+  left: 1rem;
+  animation-name: toast-in-left, leave-from-left;
+  animation-timing-function: linear, linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s, 0.3s;
+  animation-delay: 0s, 3s;
+}
+
+.notification {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #999;
+  color: #000;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.notification:hover {
+  box-shadow: 0 0 12px #fff;
+  opacity: 1;
+}
+
+.toast {
+  cursor: pointer;
+  width: 365px;
+  color: #fff;
+  padding: 20px 15px 10px 10px;
+}
+
+.container button {
+  float: right;
+  background: none;
+  border: none;
+  color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 6px;
+  width: 300px;
+  height: 18px;
+}
+
+.description {
+  margin: 0;
+  text-align: left;
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(110%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes leave-from-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes leave-from-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-110%);
+  }
+}
+
+@keyframes toast-in-left {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
